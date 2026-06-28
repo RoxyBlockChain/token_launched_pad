@@ -87,7 +87,7 @@ A local blockchain (optional, for testing) – e.g., Anvil or Hardhat Network
 🚀 Installation & Setup
 1. Clone the repository
 bash
-git clone https://github.com/yourusername/token-launcher-dapp.git
+git clone https://github.com//RoxyBlockChain/token_launched_pad.git
 cd token-launcher-dapp
 2. Install dependencies
 bash
@@ -246,7 +246,7 @@ For major changes, please open an issue first to discuss what you would like to 
 Distributed under the MIT License. See LICENSE for more information.
 
 📞 Support & Contact
-GitHub Issues: https://github.com/yourusername/token-launcher-dapp/issues
+GitHub Issues: https://github.com//RoxyBlockChain/token_launched_pad/issues
 
 Twitter: @yourhandle
 
