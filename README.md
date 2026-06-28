@@ -248,6 +248,4 @@ Distributed under the MIT License. See LICENSE for more information.
 📞 Support & Contact
 GitHub Issues: https://github.com//RoxyBlockChain/token_launched_pad/issues
 
-Twitter: @yourhandle
-
 Built with ❤️ by the Token Launcher Team
