@@ -10,6 +10,7 @@ export const tokenBytecode = contractData.bytecode;
 // Maps chainId to Uniswap V2 compatible router, factory, native wrapped token, and native symbol.
 // Includes top 10 Ethereum L2s + mainnet.
 export const CHAIN_CONFIGS = {
+  // ========== MAINNETS ==========
   // Ethereum Mainnet
   1: {
     name: 'Ethereum',
@@ -17,6 +18,14 @@ export const CHAIN_CONFIGS = {
     router: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
     factory: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f',
     weth: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+  },
+  // BNB Smart Chain
+  56: {
+    name: 'BNB Chain',
+    nativeSymbol: 'BNB',
+    router: '0x10ED43C718714eb63d5aA57B78B54704E256024E', // PancakeSwap Router v2
+    factory: '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73', // PancakeSwap Factory
+    weth: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', // WBNB
   },
   // Arbitrum One
   42161: {
@@ -30,7 +39,7 @@ export const CHAIN_CONFIGS = {
   10: {
     name: 'Optimism',
     nativeSymbol: 'ETH',
-    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506', // SushiSwap
+    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     factory: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     weth: '0x4200000000000000000000000000000000000006',
   },
@@ -46,7 +55,7 @@ export const CHAIN_CONFIGS = {
   8453: {
     name: 'Base',
     nativeSymbol: 'ETH',
-    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506', // SushiSwap
+    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     factory: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
     weth: '0x4200000000000000000000000000000000000006',
   },
@@ -54,9 +63,9 @@ export const CHAIN_CONFIGS = {
   324: {
     name: 'zkSync Era',
     nativeSymbol: 'ETH',
-    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506', // SushiSwap (verify)
+    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     factory: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
-    weth: '0x5AEa5775959fBC2557Cc8789bC1bf90A239D9a91', // WETH on zkSync
+    weth: '0x5AEa5775959fBC2557Cc8789bC1bf90A239D9a91',
   },
   // Avalanche C-Chain
   43114: {
@@ -70,26 +79,127 @@ export const CHAIN_CONFIGS = {
   1101: {
     name: 'Polygon zkEVM',
     nativeSymbol: 'ETH',
-    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506', // SushiSwap
+    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     factory: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
-    weth: '0x4F9A0e7FD2Bf6067db6994CF12E4495Df938E6e9', // WETH on Polygon zkEVM
+    weth: '0x4F9A0e7FD2Bf6067db6994CF12E4495Df938E6e9',
   },
   // Linea
   59144: {
     name: 'Linea',
     nativeSymbol: 'ETH',
-    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506', // SushiSwap
+    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     factory: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
-    weth: '0xe5D7C2a44FfDDF6b295A15c148167daaAf5Cf34f', // WETH on Linea
+    weth: '0xe5D7C2a44FfDDF6b295A15c148167daaAf5Cf34f',
   },
   // Scroll
   534352: {
     name: 'Scroll',
     nativeSymbol: 'ETH',
-    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506', // SushiSwap
+    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
     factory: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
-    weth: '0x5300000000000000000000000000000000000004', // WETH on Scroll
+    weth: '0x5300000000000000000000000000000000000004',
   },
+
+  // ========== TESTNETS ==========
+  // Ethereum Sepolia
+  11155111: {
+    name: 'Ethereum Sepolia',
+    nativeSymbol: 'ETH',
+    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506', // SushiSwap (same address)
+    factory: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
+    weth: '0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9', // Sepolia WETH
+  },
+  // BNB Chain Testnet
+  97: {
+    name: 'BNB Chain Testnet',
+    nativeSymbol: 'tBNB',
+    router: '0x9Ac64Cc6e4415144C455BD8E4837Fea55603e5c3', // PancakeSwap Testnet Router
+    factory: '0x6725F303b657a9451d8BA641348b6761A6CC7a17', // PancakeSwap Testnet Factory
+    weth: '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', // WBNB on testnet
+  },
+  // Arbitrum Sepolia
+  421614: {
+    name: 'Arbitrum Sepolia',
+    nativeSymbol: 'ETH',
+    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
+    factory: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
+    weth: '0x980B62Da83eFf3D4576C647993b0c1D7faf17c73', // Arbitrum Sepolia WETH
+  },
+  // Optimism Sepolia
+  11155420: {
+    name: 'Optimism Sepolia',
+    nativeSymbol: 'ETH',
+    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
+    factory: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
+    weth: '0x4200000000000000000000000000000000000006', // same as OP mainnet (check)
+  },
+  // Polygon Mumbai
+  80001: {
+    name: 'Polygon Mumbai',
+    nativeSymbol: 'MATIC',
+    router: '0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff', // QuickSwap Router (same)
+    factory: '0x5757371414417b8C6CAad45bAeF941aBc7d3Ab32', // QuickSwap Factory
+    weth: '0x9c3C9283D3e44854697Cd22D3Faa240Cfb032889', // Mumbai WMATIC
+  },
+  // Base Sepolia
+  84532: {
+    name: 'Base Sepolia',
+    nativeSymbol: 'ETH',
+    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
+    factory: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
+    weth: '0x4200000000000000000000000000000000000006', // same as Base
+  },
+  // zkSync Era Testnet
+  280: {
+    name: 'zkSync Era Testnet',
+    nativeSymbol: 'ETH',
+    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
+    factory: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
+    weth: '0x5AEa5775959fBC2557Cc8789bC1bf90A239D9a91', // same as mainnet (verify)
+  },
+  // Avalanche Fuji
+  43113: {
+    name: 'Avalanche Fuji',
+    nativeSymbol: 'AVAX',
+    router: '0x60aE616a2155Ee3d9A68541Ba4544862310933d4', // Trader Joe Router (same)
+    factory: '0x9Ad6C38BE94206cA50bb0d90783181662f0Cfa10', // Trader Joe Factory
+    weth: '0x1C20E891Bab6b1727d14Da358FAe2984Ed9B59Eb', // Fuji WAVAX
+  },
+  // Polygon zkEVM Testnet
+  1442: {
+    name: 'Polygon zkEVM Testnet',
+    nativeSymbol: 'ETH',
+    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
+    factory: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
+    weth: '0x4F9A0e7FD2Bf6067db6994CF12E4495Df938E6e9', // same as mainnet (verify)
+  },
+  // Linea Goerli (testnet)
+  59140: {
+    name: 'Linea Goerli',
+    nativeSymbol: 'ETH',
+    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
+    factory: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
+    weth: '0xe5D7C2a44FfDDF6b295A15c148167daaAf5Cf34f', // same as Linea mainnet (verify)
+  },
+  // Scroll Sepolia
+  534351: {
+    name: 'Scroll Sepolia',
+    nativeSymbol: 'ETH',
+    router: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
+    factory: '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
+    weth: '0x5300000000000000000000000000000000000004', // same as Scroll mainnet
+  },
+
+  // ========== LOCAL / DEVELOPMENT ==========
+  // Anvil (default Hardhat/Foundry local chain)
+  31337: {
+    name: 'Anvil (Local)',
+    nativeSymbol: 'ETH',
+    router: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D', // same as mainnet (forked)
+    factory: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f',
+    weth: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+  },
+  // You can also add Ganache (1337) if needed
 };
 
 // Default to mainnet for environment variable overrides (backward compatibility)
