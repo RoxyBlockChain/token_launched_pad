@@ -17,7 +17,9 @@ export const metadata: Metadata = {
   title: 'Token Launcher DApp',
   description: 'Deploy your ERC-20 token in seconds',
   icons: {
-    icon: './favicon.svg',
+    icon: 'favicon.ico',
+    shortcut: 'favicon.ico',
+    apple: 'favicon.ico',
   },
 };
 
