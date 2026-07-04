@@ -1,8 +1,10 @@
 🚀 Token Launcher DApp
-https://img.shields.io/badge/License-MIT-yellow.svg
-https://img.shields.io/badge/Next.js-14-black
-https://img.shields.io/badge/ethers.js-v6-blue
-https://img.shields.io/badge/Tailwind-3-38B2AC
+
+
+<img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License" />           
+<img src="https://img.shields.io/badge/Next.js-14-black" alt="Next.js" />           
+<img src="https://img.shields.io/badge/ethers.js-v6-blue" alt="ethers.js" />          
+<img src="https://img.shields.io/badge/Tailwind-3-38B2AC" alt="Tailwind" />    
 
 Deploy your own ERC‑20 token on 25+ blockchain networks in seconds – no Solidity knowledge required.
 
@@ -99,8 +101,8 @@ Clear Error Handling – Friendly messages for invalid inputs, insufficient fund
 🌐 Supported Chains
 The dApp auto‑detects your wallet's network and uses the correct DEX router. No manual configuration required.
 
-🟢 Mainnets (11)
-## 🌐 Supported Mainnets
+
+## 🟢 Supported Mainnets (11)
 
 | Chain | Native Symbol | DEX Router |
 |-------|---------------|------------|
@@ -116,8 +118,7 @@ The dApp auto‑detects your wallet's network and uses the correct DEX router. N
 | **Linea** | ETH | SushiSwap |
 | **Scroll** | ETH | SushiSwap |
 
-🧪 Testnets (13)
-## 🧪 Supported Testnets
+## 🧪 Supported Testnets (13)
 
 | Chain | Native Symbol | DEX Router |
 |-------|---------------|------------|
@@ -132,10 +133,11 @@ The dApp auto‑detects your wallet's network and uses the correct DEX router. N
 | **Polygon zkEVM Testnet** | ETH | SushiSwap |
 | **Linea Goerli** | ETH | SushiSwap |
 | **Scroll Sepolia** | ETH | SushiSwap |
-💻 Local Development
+
+## 💻 Local Development
 | Chain | Native Symbol | DEX Router |
 |-------|---------------|------------|
-| Anvil | (Hardhat/Foundry)	| ETH	Uniswap V2 (fork)
+| Anvil | (Hardhat/Foundry)	| ETH	Uniswap V2 (fork) |
 New chain? You can easily add more by extending CHAIN_CONFIGS in lib/contracts.js.
 
 📦 Prerequisites
@@ -164,10 +166,11 @@ yarn install
 3. Set up environment variables (optional)
 Create a .env.local file in the root directory to override mainnet addresses:
 
-env
+```env
 NEXT_PUBLIC_UNISWAP_ROUTER=0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D
 NEXT_PUBLIC_UNISWAP_FACTORY=0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f
 NEXT_PUBLIC_WETH=0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+```
 These are mainnet addresses. For testnets, the dApp uses built‑in configs – you don't need to change them.
 
 4. Compile the smart contract (optional)
