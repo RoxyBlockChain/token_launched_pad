@@ -11,6 +11,7 @@ Deploy your own ERC‑20 token on 25+ blockchain networks in seconds – no Soli
 A modern, feature-rich decentralized application (dApp) built with Next.js and ethers.js that allows anyone to deploy an ERC‑20 token on any Ethereum-compatible blockchain with just a few clicks. Supports 11 Mainnets, 13 Testnets, and Local Anvil for development – all with automatic DEX integration and advanced tokenomics.
 
 📋 Table of Contents
+
 🌟 Overview
 
 ✨ Features
@@ -42,6 +43,7 @@ A modern, feature-rich decentralized application (dApp) built with Next.js and e
 📞 Support & Contact
 
 🌟 Overview
+
 The Token Launcher DApp abstracts away the complexity of deploying an ERC‑20 token. You provide just 4 parameters (Name, Symbol, Decimals, Total Supply) – the dApp handles the rest:
 
 ✅ Deploys the smart contract via MetaMask
@@ -55,7 +57,9 @@ The Token Launcher DApp abstracts away the complexity of deploying an ERC‑20 t
 Designed with security and user experience in mind, the dApp automatically detects your connected wallet's network, uses the correct DEX router (Uniswap, SushiSwap, PancakeSwap, QuickSwap, Trader Joe), estimates gas costs, and provides real‑time feedback.
 
 ✨ Features
+
 🎯 Core Token Deployment
+
 Parameter Input – Token Name, Symbol, Decimals, Total Supply.
 
 Gas Estimation – Automatic check of native currency balance (ETH, BNB, MATIC, AVAX) with warnings.
@@ -65,6 +69,7 @@ Real‑time Status – Deployment progress, transaction hash, token address with
 Multi‑Chain Support – 11 mainnets, 13 testnets, and local Anvil – just connect your wallet.
 
 ⚡ Advanced Tokenomics
+
 Mint & Burn – Toggle to include ERC20Burnable and Ownable mint functions (contract customization).
 
 Multi‑Wallet Distribution – Add multiple addresses with percentage allocations (must sum to 100%).
@@ -72,6 +77,7 @@ Multi‑Wallet Distribution – Add multiple addresses with percentage allocatio
 One‑Click Liquidity – Automatically create a Uniswap V2 pair (or fork) and add liquidity in one flow.
 
 🔗 Wallet & Connectivity
+
 MetaMask Integration – Seamless connection using ethers.js and @metamask/detect-provider.
 
 Network Display – Shows connected address, balance, chain ID, and native currency symbol.
@@ -79,6 +85,7 @@ Network Display – Shows connected address, balance, chain ID, and native curre
 Auto‑refresh – Listens to account/network changes and reloads data.
 
 🎨 User Experience
+
 Glass‑morphism UI – Gradient backgrounds, custom toggle switches, animated buttons.
 
 Fully Responsive – Works on desktop, tablet, and mobile.
