@@ -85,7 +85,6 @@ Fully Responsive – Works on desktop, tablet, and mobile.
 
 Clear Error Handling – Friendly messages for invalid inputs, insufficient funds, or transaction failures.
 
-🛠️ Tech Stack
 ## 🛠️ Tech Stack
 
 | Area | Technology |
@@ -138,18 +137,19 @@ The dApp auto‑detects your wallet's network and uses the correct DEX router. N
 | Chain | Native Symbol | DEX Router |
 |-------|---------------|------------|
 | Anvil | (Hardhat/Foundry)	| ETH	Uniswap V2 (fork) |
+
 New chain? You can easily add more by extending CHAIN_CONFIGS in lib/contracts.js.
 
 📦 Prerequisites
 Before you begin, ensure you have installed:
 
-Node.js (v18 or higher)
+--Node.js (v18 or higher)
 
-npm or yarn
+--npm or yarn
 
-MetaMask browser extension
+--MetaMask browser extension
 
-A local blockchain (optional) – e.g., Anvil or Hardhat Network
+--A local blockchain (optional) – e.g., Anvil or Hardhat Network
 
 🚀 Installation & Setup
 1. Clone the repository
@@ -176,8 +176,9 @@ These are mainnet addresses. For testnets, the dApp uses built‑in configs – 
 4. Compile the smart contract (optional)
 If you want to modify the token contract, place your Solidity file in contracts/ and compile using Hardhat or Foundry. Then run:
 
-bash
+```bash
 npm run extract-contracts
+```
 This generates lib/contracts.json with the latest ABI and bytecode.
 
 5. Run the development server
@@ -188,8 +189,10 @@ yarn dev
 ```
 Open http://localhost:3000 to view the dApp.
 
-⚙️ Configuration
+##⚙️ Configuration
+
 🔧 Smart Contract Customization
+
 The default contract is a standard ERC‑20 with optional burn and mint functions. To customize:
 
 Edit contracts/MyToken.sol.
@@ -199,14 +202,17 @@ Re‑compile and run npm run extract-contracts.
 The dApp will automatically use the updated bytecode.
 
 🌐 Adding New Chains
+
 To support a new EVM chain, add an entry to CHAIN_CONFIGS in lib/contracts.js with the required fields:
 
 name, nativeSymbol, router, factory, weth.
 
 🧭 Network Switching
+
 The dApp uses window.ethereum to detect the current network. You can add chain‑switching logic by calling switchNetwork(chainId) from lib/ethers.js.
 
 🧭 Usage Guide
+
 Connect Wallet – Click "Connect MetaMask" and approve the connection.
 
 Fill Token Parameters – Enter Name, Symbol, Decimals, and Total Supply.
@@ -228,6 +234,7 @@ Monitor Progress – Status updates, transaction hash, and final token address a
 Verify – Use the links to view your token on the chain’s explorer.
 
 📜 Smart Contract Integration
+
 The dApp uses a pre‑compiled ERC‑20 contract based on OpenZeppelin’s standard with this constructor:
 
 ```solidity
@@ -248,7 +255,9 @@ The liquidity step interacts with the Router contract:
 
 Approves the Router to spend tokens.
 Calls addLiquidityETH (or the chain's native wrapper) to create the pair and deposit liquidity.
+
 📂 Project Structure
+
 ```text
 token-launcher-dapp/
 ├── app/
@@ -269,7 +278,9 @@ token-launcher-dapp/
 └── README.md
 ```
 🧪 Development & Testing
+
 Running Tests with Anvil
+
 Start Anvil:
 
 ```bash
@@ -291,13 +302,20 @@ npm run lint
 npm run format
 ```
 🌐 Deployment
+
 Deploy to Vercel (Recommended)
+
 ```bash
 npm run build
 ```
 # Deploy using Vercel CLI or GitHub integration
+
+```bash
 vercel --prod
+```
+
 Manual Build
+
 ```bash
 npm run build
 npm start
@@ -305,6 +323,7 @@ npm start
 Make sure to set environment variables in your hosting platform (Vercel, Netlify, etc.) for Uniswap addresses.
 
 🤝 Contributing
+
 Contributions are welcome! Please follow these steps:
 
 Fork the repository.
@@ -320,9 +339,11 @@ Open a Pull Request.
 For major changes, please open an issue first to discuss what you would like to change.
 
 📄 License
+
 Distributed under the MIT License. See LICENSE for more information.
 
 📞 Support & Contact
+
 GitHub Issues: https://github.com/RoxyBlockChain/token_launched_pad/issues
 
 Built with ❤️ by the Token Launcher Team
